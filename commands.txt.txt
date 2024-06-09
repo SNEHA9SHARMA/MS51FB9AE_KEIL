@@ -1,0 +1,12 @@
+cd "C:\Users\sneha\OneDrive\Desktop\keil_ms51fb9ae"
+git config --global user.name Sneha
+git config --global user.email "snehaias04@gmail.com"
+touch .gitignore
+git init
+git add .
+git commit -m "Initial Commit"
+git status #Just to see
+git remote add origin git@github.com:SNEHA9SHARMA/MS51FB9AE_KEIL.git
+ssh-keygen -t rsa -b 4096 -C "snehaias04@gmail.com"
+cat /c/Users/sneha/.ssh/id_rsa.pub
+git push origin master
