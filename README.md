@@ -6,7 +6,7 @@ This project consists of coding for different peripherals of the MS51FB9AE Nuvot
 - **Microcontroller**
 - **Wires**
 - **Potentiometer**
-- **ESP8266**
+- **UART Device**
 - **Logic Analyzer**
 - **Programmer**
 
