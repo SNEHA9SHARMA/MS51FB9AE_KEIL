@@ -21,10 +21,11 @@ void main() {
     initI2c();
     initSevenSegment();
     initTimer();
-
+    EA=0;
     Flash_Unlock();
     written=Flash_Read(FLASH_ADDR10);
     Flash_Lock();
+    EA=1;
     ENABLE_GLOBAL_INTERRUPT;
    
     if(written==1){written=1;}
