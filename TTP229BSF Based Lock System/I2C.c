@@ -142,8 +142,8 @@ for(iterate=0;iterate<10;iterate++){
             reading_flag = 0;}
             if( newKey==keyHolder[iterate] ) { v++; } 
 }
-            if(v==10)  {uartTxString("Ok!\n"); a=9; b=0; c=0; dseg=10;} 
-            else       {uartTxString("Not Ok!\n"); a=0; b=0; c=0; dseg=0;}          
+            if(v==10)  {uartTxString("Ok!\n"); a=9; b=0; c=0; dseg=10;}   // to print "good" in sevenSegment
+            else       {uartTxString("Not Ok!\n"); a=11; b=12; c=1; dseg=13;}    // to print "FAIL" in sevenSegment      
             v=0;
             travelCount=0;
             initKeyHolder();
@@ -160,6 +160,7 @@ void setMode(void){
         oldKey = New_Key;  // Update oldKey
         
         if (New_Key != 0) {
+	    a=0;b=0;c=0;dseg=0;
             // Serial.print(F(" "));
             // Serial.println(New_Key, HEX);
             uartTxChar(' ');
